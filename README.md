@@ -327,7 +327,7 @@ https://gist.github.com/MokusM/e820753631e69ee6a4a7075d25dee853
 
 ## Примеры кода полезных скриптов:
 
-### 1. Если нужно зафиксировать какую-то плашку, панель, сайдбар - это делается без дополнительных плагинов: 
+#### 1. Если нужно зафиксировать какую-то плашку, панель, сайдбар - это делается без дополнительных плагинов: 
 
 ```js
 if($('.fixed-block').length){
@@ -351,7 +351,7 @@ if($('.fixed-block').length){
 ```
 https://gist.github.com/MokusM/278becc893aa9dd157c0579d42100727
 
-### 2. Если нужно плавно проскролить к id: 
+#### 2. Если нужно плавно проскролить к id: 
 
 ```js
 $('.js-scroll').click(function() {
@@ -364,7 +364,7 @@ $('.js-scroll').click(function() {
 ```
 https://gist.github.com/MokusM/7496c238fdb5bb9f729b7fbf938bdeeb
 
-### 3. Если нужно плавно проскролить к верху страницы:
+#### 3. Если нужно плавно проскролить к верху страницы:
 
 ```js
 $(".js-top").click(function() {
@@ -374,26 +374,123 @@ $(".js-top").click(function() {
 ```
 https://gist.github.com/MokusM/60de19f932cc6a9948e39dc4a788f21b
 
-### 4. Если нужно свернуть/развернуть блок с заменой текста в кнопке:
+#### 4. Если нужно свернуть/развернуть блок с заменой текста в кнопке:
 
 ```js
-$(".js-top").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
+$(".js-toggle").toggle(function() {
+  $(this).parents('.help').find('.block').slideDown();
+  $(this).text("Свернуть");
+}, function() {
+  $(this).parents('.help').find('.block').slideUp();
+  $(this).text("Развернуть");
 }); 
 ```
+https://gist.github.com/MokusM/9a71d05dac4197ec99a9f165fbf67680
 
+#### 5. Если нужно для ретины скриптом подменять url  в картинке:
 
+```js
+if($('.js-img').length) {     
+  if(window.devicePixelRatio > 1) {
+    var lowresImages = $('img.js-img');
+    lowresImages.each(function(i) {
+      var lowres = $(this).attr('data-original');
+      var highres = lowres.replace(".png", "@2x.png");
+      var highresJpg = lowres.replace(".jpg", "@2x.jpg");
+      $(this).attr('data-original', highres);
+      $(this).attr('data-original', highresJpg);
+    });
+  }        
+} 
+```
+https://gist.github.com/MokusM/6ade310f461d80ba978c292a9266c472
 
+#### 6. Если нужно по клику увеличивать или уменьшать число счётчике:
 
+```html
+<span class="counter">
+  <span class="counter__input">
+    <input type="text" value="10">
+  </span>
+  <span class="counter__button">
+    <span class="counter__link counter__link_next"></span>   
+    <span class="counter__link counter__link_prev"></span> 
+  </span>
+</span>
+```
+```js
+$('.counter__link_prev').click(function() {
+  var $input = $(this).parents('.box-counter').find('input');
+  var count = parseInt($input.val()) - 1;
+  count = count < 1 ? 1 : count;
+  $input.val(count);
+  $input.change();
+  return false;
+});
+$('.counter__link_next').click(function() {
+  var $input = $(this).parents('.box-counter').find('input');
+  var count = parseInt($input.val()) + 1;
+  count = count > ($input.attr("maxlength")) ? ($input.attr("maxlength")) : count;
+  $input.val(count);
+  $input.change();
+  return false;
+});
+```
+https://gist.github.com/MokusM/671aebc4e3f71b18454d3e4d855462d7
 
+#### 7. По клику вне блока закрывать его:
 
+```js
+$(document).on('touchstart click', function(e) {
+  if ($(e.target).parents().filter('.main-nav:visible').length != 1) {
+    $('.main-nav').removeClass('open-nav');
+  }
+});
+```
+https://gist.github.com/MokusM/717a2759103afbd0225ee96fb0421e2a
 
+#### 8. Инициализация Яндекс карты:
 
+```js
+if ($('#map').length) {
+  ymaps.ready(function() {
+    var myMap = new ymaps.Map('map', {
+    center: [55.760874, 37.718076],
+    zoom: 15
+  }, {
+    searchControlProvider: 'yandex#search'
+  }),
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    hintContent: ''
+  }, {
+    iconLayout: 'default#image'
+  });
+    myMap.geoObjects.add(myPlacemark);            
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      myMap.behaviors.disable('multiTouch');
+      myMap.behaviors.disable('scrollZoom');
+      myMap.behaviors.disable('drag');
+    }
+  });
+};
+```
+https://gist.github.com/MokusM/6f8900b132b7c69ac8f8b2fb045abe90
 
+#### 9. Инициализация Гугл карты, стилизованная:
 
+https://gist.github.com/MokusM/0aa4273a1dfc69aa4d004c3fb132a007 
 
+#### 10. Еслим нужно при адаптации вырезать блок и вставить в другое место:
 
+```js
+if (viewport_wid <= 767) {
+  $('.col-country').detach().insertAfter($('.customers'));
+}
+if (viewport_wid > 767) {
+  $('.col-country').detach().insertAfter($('.customers-map'));
+}
+```
+https://gist.github.com/MokusM/3f742702296e3684fe2630638e6d03aa 
 
 
 ## Слова, часто используемые в CSS-классах
