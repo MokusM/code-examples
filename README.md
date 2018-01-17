@@ -198,7 +198,7 @@ https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749
   </form>
 </div>
 ```
-https://gist.github.com/MokusM/1fedb0120d3eb29784f1009e435421ea 
+https://gist.github.com/MokusM/1fedb0120d3eb29784f1009e435421ea<br>
 В текстовых полях параметр type может принимать следующие значения:
 text, password, email, number, search, tel, url
 
