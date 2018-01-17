@@ -163,6 +163,188 @@ https://gist.github.com/MokusM/77227bdb56f9de05cd4e60ed7e6f519b
 ``` 
 https://gist.github.com/MokusM/498a755a3dc77fb9506a875c68ac7438
 
+### 7. Новости:
+
+```html
+<div class="box-news">
+  <article class="box-news__item">
+    <h3><a href="#"></a></h3>
+  </article>
+  <article class="box-news__item">
+    <h3><a href="#"></a></h3>
+  </article>
+</div>
+``` 
+https://gist.github.com/MokusM/1ee515b829e97fb2b9069d495c4aee60
+
+### 8. Список продуктов:
+
+```html
+<ul class="products-list">
+  <li class="products-list__item">
+    <div class="products-list__cont">
+      <div class="products-list__logo">
+        <a href="#"><img src="img/logo_1.png" alt=""></a>
+      </div>
+      <div class="description-product">
+        ...
+      </div>
+    </div>
+  </li>
+</ul>
+``` 
+https://gist.github.com/MokusM/dfee10d275f6605189e47c4a41635971
+
+### 9. Хлебные крошки: 
+
+```html
+<div class="box-bread-crumbs">
+  <ul class="bread-crumbs">
+    <li class="bread-crambs__item">
+      <a href="#" class="bread-crambs__link">Главная</a>
+    </li>
+    <li class="bread-crambs__item">Оплата и доставка</li>
+  </ul>
+</div>
+``` 
+https://gist.github.com/MokusM/046ed3235d8e1d2696cd7aef5056da86
+
+### 10. Пагинация: 
+
+```html
+<div class="box-paging">
+  <ul class="paging-list">
+    <li class="paging-list__item paging-prev"><a href="#" class="paging-list__link"><span class="arrow-paging"></span></a></li>
+    <li class="paging-list__item active"><a href="#" class="paging-list__link">1</a></li>
+    <li class="paging-list__item"><a href="#" class="paging-list__link">2</a></li>               	                                     	
+    <li class="paging-list__item paging-next"><a href="#" class="paging-list__link"><span class="arrow-paging"></span></a></li>
+  </ul>
+</div>
+``` 
+https://gist.github.com/MokusM/5d44b1222d3156c8e9b487e94e760ac1 
+
+### 11. Таблицы (если верстаются без использования table):
+
+```html
+<ul class="table-list">
+  <li class="table-list__item">
+    <div class="col col_1">...</div>
+    <div class="col col_2">...</div>
+    <div class="col col_3">...</div>
+  </li>
+  <li class="table-list__item">
+    <div class="col col_1">...</div>
+    <div class="col col_2">...</div>
+    <div class="col col_3">...</div>
+  </li>
+</ul>
+``` 
+в стилях колонки прописываются либо display:table-cell (тогда li это display:table-row, а ul - display:table), либо display:inline-block. либо делаем на flex
+https://gist.github.com/MokusM/b6f936c3b79e381196a751828e1234f4
+
+### 12. Попапы:
+
+```html
+<a href="#win_1" class="fancybox">открывается первое окно</a>
+<a href="#win_2" class="fancybox">открывается второе окно</a>
+``` 
+Попапы в коде ставятся перед закрытием основного дива main-wrapper
+```html
+<div class="popup">
+  <div class="window-open" id="win_1">
+    <div class="window-open-cont">
+      ...
+    </div>
+  </div>
+  <div class="window-open" id="win_2">
+    <div class="window-open-cont">
+      ...
+    </div>
+  </div>
+</div>
+``` 
+Скрываются попапы классом .popup без использования display:none;
+```css
+.popup{
+  position:absolute;
+  left:-9999px;top:-9999px;
+  opacity:0;
+}
+.window-open {
+  width:1345px;max-width:100%;
+  background:#FFF;
+  position:relative;
+  box-shadow:0 0 7px 0 rgba(0,0,0,0.5);
+  padding:35px;
+}
+```
+https://gist.github.com/MokusM/af7febe53d28c84294877cd2e65912a0
+
+### 13. Табы: 
+
+```html
+<div class="tab-wrap">
+  <ul class="nav-tab-list tabs">
+    <li class="nav-tab-list__item active">
+      <a href="#tab_1" class="nav-tab-list__link">таб_1</a>
+    </li>
+    <li class="nav-tab-list__item">
+      <a href="#tab_2" class="nav-tab-list__link">таб_2</a>
+    </li>
+  </ul>
+  <div class="box-tab-cont">
+    <div class="tab-cont" id="tab_1">...</div>
+    <div class="tab-cont hide" id="tab_2">...</div>
+  </div>
+</div>
+```
+Неактивный таб скрывается стилями без использования display:none;
+```css
+.box-tab-cont{
+  position: relative;
+}
+.hide-tab{
+  position: absolute;
+  left: 0;top: 0;
+  height:0; width:0;
+  overflow:hidden;
+  z-index: -1;
+  opacity: 0;
+}
+```
+Скрипт для табов
+```js
+/* tabs*/
+$('.tabs li a').click(function() {
+  $(this).parents('.tab-wrap').find('.tab-cont').addClass('hide-tab');
+  $(this).parent().siblings().removeClass('active');
+  var id = $(this).attr('href');
+  $(id).removeClass('hide-tab');
+  $(this).parent().addClass('active');
+  return false;
+});
+/* tabs*/
+```
+https://gist.github.com/MokusM/e820753631e69ee6a4a7075d25dee853
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Слова, часто используемые в CSS-классах
 
