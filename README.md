@@ -92,7 +92,7 @@ https://gist.github.com/MokusM/e7f5b6665956c17f1c6624e8d26d545c
     <li class="main-nav-list__item"><a href="#" class="main-nav-list__link"></a></li>
     <li class="main-nav-list__item"><a href="#" class="main-nav-list__link"></a></li>
     <li class="main-nav-list__item"><a href="#" class="main-nav-list__link"></a></li>
-	</ul>
+  </ul>
 </nav>
 ```
 https://gist.github.com/MokusM/3af9f8f62c0fd7ee35e784d8f88d7d6c
