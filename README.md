@@ -89,10 +89,10 @@ https://gist.github.com/MokusM/e7f5b6665956c17f1c6624e8d26d545c
 ```html
 <nav class="main-nav">
   <ul class="main-nav-list">
-    <li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Компания</a></li>
-    <li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Пресс-центр</a></li>
-    <li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Партнерство</a></li>
-  </ul>
+    <li class="main-nav-list__item"><a href="#" class="main-nav-list__link"></a></li>
+    <li class="main-nav-list__item"><a href="#" class="main-nav-list__link"></a></li>
+    <li class="main-nav-list__item"><a href="#" class="main-nav-list__link"></a></li>
+	</ul>
 </nav>
 ```
 https://gist.github.com/MokusM/3af9f8f62c0fd7ee35e784d8f88d7d6c
@@ -214,10 +214,22 @@ https://gist.github.com/MokusM/046ed3235d8e1d2696cd7aef5056da86
 ```html
 <div class="box-paging">
   <ul class="paging-list">
-    <li class="paging-list__item paging-prev"><a href="#" class="paging-list__link"><span class="arrow-paging"></span></a></li>
-    <li class="paging-list__item active"><a href="#" class="paging-list__link">1</a></li>
-    <li class="paging-list__item"><a href="#" class="paging-list__link">2</a></li>               	                                     	
-    <li class="paging-list__item paging-next"><a href="#" class="paging-list__link"><span class="arrow-paging"></span></a></li>
+    <li class="paging-list__item paging-prev">
+      <a href="#" class="paging-list__link">
+        <span class="arrow-paging"></span>
+      </a>
+    </li>
+    <li class="paging-list__item active">
+      <a href="#" class="paging-list__link">1</a>
+    </li>
+    <li class="paging-list__item">
+      <a href="#" class="paging-list__link">2</a>
+    </li>               	                                     	
+    <li class="paging-list__item paging-next">
+      <a href="#" class="paging-list__link">
+        <span class="arrow-paging"></span>
+      </a>
+    </li>
   </ul>
 </div>
 ``` 
