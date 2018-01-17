@@ -69,7 +69,7 @@ https://gist.github.com/MokusM/932720bb9125e087d9b66736cfef01d0
 ```html
 <ul class="list-check">
   <li class="list-check__item">
-    <label class="list-check __label">
+    <label class="list-check__label">
       <input type="checkbox" name="check_1">
       <span class="label-text">Name_1</span>
     </label>
@@ -102,35 +102,68 @@ https://gist.github.com/MokusM/3af9f8f62c0fd7ee35e784d8f88d7d6c
 Кнопкам задается класс .button изменения цветов фонов, любых параметров  - дописывается модификатором, к примеру .button_primary, .button_default...
 ```css
 .button{
-	display: inline-block;
-	vertical-align: top;
-	padding: 16px 30px 0 30px;
-	height: 52px;
-	border-radius: 26px;
-	position: relative;
-	font-size: 16px;
-	line-height: 18px;
-	letter-spacing: 0.5px;
-	color: #0f3755;
-	border: 1px solid #ffc601;
-	background: #ffc601;
-	-moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear;
-	text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding: 16px 30px 0 30px;
+  height: 52px;
+  border-radius: 26px;
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #0f3755;
+  border: 1px solid #ffc601;
+  background: #ffc601;
+  transition: all 0.2s linear;
+  text-align: center;
 }
 .button:hover{
-	border-color:#0f3755;
-	background: #0f3755;
-	color: #FFF;
+  border-color:#0f3755;
+  background: #0f3755;
+  color: #FFF;
 }
 button.button, input.button{ padding-top: 0px!important;}
 .button_small{
-	height:34px;
-	padding: 9px 23px 0 23px;
-	font-size: 14px;
-	line-height: 16px;
+  height:34px;
+  padding: 9px 23px 0 23px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 ```
+
+### 5. FAQ: 
+
+```html
+<div class="box-faq">
+  <a href="#" class="box-faq__link-all">Показать/Скрыть все</a>
+  <ul class="list-faq">
+    <li class="list-faq__item">
+      <a href="#" class="list-faq__link">question?</a>
+      <div class="list-faq__answer">
+        <p>Ответ</p>
+      </div>
+    </li>
+  </ul>
+</div>
+```
+https://gist.github.com/MokusM/77227bdb56f9de05cd4e60ed7e6f519b
+
+### 6. Статьи:
+
+```html
+<div class="box-article">
+  <article class="box-article__item">
+    <h3><a href="#"></a></h3>
+  </article>
+  <article class="box-article__item">
+    <h3><a href="#"></a></h3>
+  </article>
+</div>
+``` 
+https://gist.github.com/MokusM/498a755a3dc77fb9506a875c68ac7438
+
+
 ## Слова, часто используемые в CSS-классах
 
 ### Изображения
