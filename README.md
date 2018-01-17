@@ -325,11 +325,63 @@ $('.tabs li a').click(function() {
 ```
 https://gist.github.com/MokusM/e820753631e69ee6a4a7075d25dee853
 
+## Примеры кода полезных скриптов:
 
+### 1. Если нужно зафиксировать какую-то плашку, панель, сайдбар - это делается без дополнительных плагинов: 
 
+```js
+if($('.fixed-block').length){
+  var offset_this = $('.fixed-block').offset();
+  var scr_top = $(window).scrollTop();   	
+  $(window).scroll(function() {
+    if (offset_this.top <= scr_top) {
+      $('.fixed-block').addClass("fixed");
+    } else{
+      $('.fixed-block').removeClass("fixed") 	
+    }
+  });
+  $(window).load(function() {
+    if (offset_this.top <= scr_top) {
+      $('.fixed-block').addClass("fixed");
+    } else{
+      $('.fixed-block').removeClass("fixed") 	
+    }
+  });
+};
+```
+https://gist.github.com/MokusM/278becc893aa9dd157c0579d42100727
 
+### 2. Если нужно плавно проскролить к id: 
 
+```js
+$('.js-scroll').click(function() {
+  var target = $(this).attr('href');
+  $('html, body').animate({
+   scrollTop: $(target).offset().top
+  }, 1000);
+  return false;
+});
+```
+https://gist.github.com/MokusM/7496c238fdb5bb9f729b7fbf938bdeeb
 
+### 3. Если нужно плавно проскролить к верху страницы:
+
+```js
+$(".js-top").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+}); 
+```
+https://gist.github.com/MokusM/60de19f932cc6a9948e39dc4a788f21b
+
+### 4. Если нужно свернуть/развернуть блок с заменой текста в кнопке:
+
+```js
+$(".js-top").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+}); 
+```
 
 
 
