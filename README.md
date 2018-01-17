@@ -173,8 +173,8 @@
   </ul>
 </div> 
 ```
-<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749" target="_blanck">https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749</a>
-
+<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749" target="_blanck"></a>
+https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749
 ### Картинка пользователя (юзерпик)
 
 ```html
