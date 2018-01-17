@@ -169,9 +169,10 @@
 			<a class="list-lang__link" href="#">укр</a>
 		</li>
 	</ul>
-</div> 
-<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749">https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749</a>
+</div>
+
 ```
+<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749">https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749</a>
 
 ### Картинка пользователя (юзерпик)
 
