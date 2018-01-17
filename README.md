@@ -3,6 +3,7 @@
 ### Изображения
 
 `image`, `img`, `picture`, `pic` — картинка
+
 `icon` — иконка
 
 `logo` — логотип
@@ -172,16 +173,34 @@
   </ul>
 </div> 
 ```
-<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749" target="_blanck"></a>
 https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749
-### Картинка пользователя (юзерпик)
+
+### 2. Элементы форм
 
 ```html
-<div class="user">
-  <img class="user__img" src="userpic.png" alt="Дормидонт Петрович">
-  <a class="user__link" href="#">Дормидонт Петрович</a>
+<div class="box-form">
+  <form>
+    <div class="box-field">
+      <label for="" class="box-field__label"></label>
+      <div class="box-field__input">
+        <input type="text" class="form-control" placeholder="Имя">
+      </div>
+    </div>
+    <div class="box-field">
+      <label for="" class="box-field__label"></label>
+      <div class="box-field__input">
+        <select>
+          <option>name_1</option>
+          <option>name_2</option>
+        </select>
+      </div>
+    </div>
+  </form>
 </div>
 ```
+https://gist.github.com/MokusM/1fedb0120d3eb29784f1009e435421ea 
+В текстовых полях параметр type может принимать следующие значения:
+text, password, email, number, search, tel, url
 
 ### Галерея
 
