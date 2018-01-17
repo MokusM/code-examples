@@ -154,25 +154,26 @@
 
 `pending` — состояние ожидания, например, перед сменой статуса на error или success
 
+
+
 ## Примеры кода БЭМ
-### эти заготовки используем в обязательном порядке!!! заготовки можна брать по ссылке на gist
+#### Эти заготовки используем в обязательном порядке!!! заготовки можна брать по ссылке на gist
 
 ### 1. Выбор языков
 
 ```html
 <div class="box-lang">
-	<ul class="list-lang">
-		<li class="list-lang__item active">
-			<a class="list-lang__link" href="#">Рус</a>
-		</li>
-		<li class="list-lang__item">
-			<a class="list-lang__link" href="#">укр</a>
-		</li>
-	</ul>
-</div>
-
+  <ul class="list-lang">
+    <li class="list-lang__item active">
+      <a class="list-lang__link" href="#">Рус</a>
+    </li>
+    <li class="list-lang__item">
+      <a class="list-lang__link" href="#">укр</a>
+    </li>
+  </ul>
+</div> 
 ```
-<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749">https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749</a>
+<a href="https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749" target="_blanck">https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749</a>
 
 ### Картинка пользователя (юзерпик)
 
