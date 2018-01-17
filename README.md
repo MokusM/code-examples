@@ -239,7 +239,7 @@ https://gist.github.com/MokusM/5d44b1222d3156c8e9b487e94e760ac1
   </li>
 </ul>
 ``` 
-в стилях колонки прописываются либо display:table-cell (тогда li это display:table-row, а ul - display:table), либо display:inline-block. либо делаем на flex
+в стилях колонки прописываются либо display:table-cell (тогда li это display:table-row, а ul - display:table), либо display:inline-block. либо делаем на flex<br>
 https://gist.github.com/MokusM/b6f936c3b79e381196a751828e1234f4
 
 ### 12. Попапы:
@@ -314,7 +314,6 @@ https://gist.github.com/MokusM/af7febe53d28c84294877cd2e65912a0
 ```
 Скрипт для табов
 ```js
-/* tabs*/
 $('.tabs li a').click(function() {
   $(this).parents('.tab-wrap').find('.tab-cont').addClass('hide-tab');
   $(this).parent().siblings().removeClass('active');
@@ -323,7 +322,6 @@ $('.tabs li a').click(function() {
   $(this).parent().addClass('active');
   return false;
 });
-/* tabs*/
 ```
 https://gist.github.com/MokusM/e820753631e69ee6a4a7075d25dee853
 
