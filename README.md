@@ -68,11 +68,11 @@ https://gist.github.com/MokusM/932720bb9125e087d9b66736cfef01d0
 
 ### Изображения
 
-`image`, `img`, `picture`, `pic` — картинка
-`icon` — иконка
-`logo` — логотип
-`userpic`, `avatar` — юзерпик, маленькая картинка пользователя
-`thumbnail`, `thumb` — миниатюра, уменьшенное изображение
+`image`, `img`, `picture`, `pic` — картинка<br>
+`icon` — иконка<br>
+`logo` — логотип<br>
+`userpic`, `avatar` — юзерпик, маленькая картинка пользователя<br>
+`thumbnail`, `thumb` — миниатюра, уменьшенное изображение<br>
 
 ### Текст
 
