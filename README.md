@@ -1,15 +1,77 @@
-# Слова, часто используемые в CSS-классах
+## Примеры кода БЭМ
+#### Эти заготовки используем в обязательном порядке!!! заготовки можна брать по ссылке на gist
+
+### 1. Выбор языков
+
+```html
+<div class="box-lang">
+  <ul class="list-lang">
+    <li class="list-lang__item active">
+      <a class="list-lang__link" href="#">Рус</a>
+    </li>
+    <li class="list-lang__item">
+      <a class="list-lang__link" href="#">укр</a>
+    </li>
+  </ul>
+</div> 
+```
+https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749
+
+### 2. Элементы форм
+
+```html
+<div class="box-form">
+  <form>
+    <div class="box-field">
+      <label for="" class="box-field__label"></label>
+      <div class="box-field__input">
+        <input type="text" class="form-control" placeholder="Имя">
+      </div>
+    </div>
+    <div class="box-field">
+      <label for="" class="box-field__label"></label>
+      <div class="box-field__input">
+        <select>
+          <option>name_1</option>
+          <option>name_2</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+```
+https://gist.github.com/MokusM/1fedb0120d3eb29784f1009e435421ea<br>
+В текстовых полях параметр type может принимать следующие значения:
+text, password, email, number, search, tel, url
+
+#### Списки с радио кнопками: 
+
+```html
+<ul class="list-radio">
+  <li class="list-radio__item">
+    <label class="list-radio__label">
+      <input type="radio" name="name_1">
+      <span class="label-text">Name_1</span>
+    </label>
+  </li>
+  <li class="list-radio__item">
+    <label class="list-radio__label">
+      <input type="radio" name="name_1">
+      <span class="label-text">Name_2</span>
+    </label>
+  </li>
+</ul>
+```
+https://gist.github.com/MokusM/932720bb9125e087d9b66736cfef01d0 
+
+## Слова, часто используемые в CSS-классах
 
 ### Изображения
 
 `image`, `img`, `picture`, `pic` — картинка
-
 `icon` — иконка
-
 `logo` — логотип
-
 `userpic`, `avatar` — юзерпик, маленькая картинка пользователя
-
 `thumbnail`, `thumb` — миниатюра, уменьшенное изображение
 
 ### Текст
@@ -153,231 +215,3 @@
 `success` — статус успешного выполнения задачи
 
 `pending` — состояние ожидания, например, перед сменой статуса на error или success
-
-
-
-## Примеры кода БЭМ
-#### Эти заготовки используем в обязательном порядке!!! заготовки можна брать по ссылке на gist
-
-### 1. Выбор языков
-
-```html
-<div class="box-lang">
-  <ul class="list-lang">
-    <li class="list-lang__item active">
-      <a class="list-lang__link" href="#">Рус</a>
-    </li>
-    <li class="list-lang__item">
-      <a class="list-lang__link" href="#">укр</a>
-    </li>
-  </ul>
-</div> 
-```
-https://gist.github.com/MokusM/87ba7f6d31424cad745e04fe834c1749
-
-### 2. Элементы форм
-
-```html
-<div class="box-form">
-  <form>
-    <div class="box-field">
-      <label for="" class="box-field__label"></label>
-      <div class="box-field__input">
-        <input type="text" class="form-control" placeholder="Имя">
-      </div>
-    </div>
-    <div class="box-field">
-      <label for="" class="box-field__label"></label>
-      <div class="box-field__input">
-        <select>
-          <option>name_1</option>
-          <option>name_2</option>
-        </select>
-      </div>
-    </div>
-  </form>
-</div>
-```
-https://gist.github.com/MokusM/1fedb0120d3eb29784f1009e435421ea<br>
-В текстовых полях параметр type может принимать следующие значения:
-text, password, email, number, search, tel, url
-
-### Галерея
-
-```html
-<div class="gallery">
-  <ul class="gallery__list">
-    <li class="gallery__item">
-      <img class="gallery__img" src="flowers.jpg" alt="Цветём как в последний раз">
-    </li>
-    <li class="gallery__item">
-      <img class="gallery__img" src="trees.jpg" alt="Парк «Три сосны»">
-    </li>
-  </ul>
-</div>
-```
-
-### Навигация
-
-```html
-<nav class="nav">
-  <a class="nav__link nav__link--active">Главная</a>
-  <a class="nav__link" href="#">Второстепенная</a>
-  <a class="nav__link" href="#">Третья с конца</a>
-  <a class="nav__link" href="#">Предпоследняя</a>
-  <a class="nav__link" href="#">Совсем конец</a>
-</nav>
-```
-
-```html
-<nav class="nav">
-  <ul class="nav__list">
-    <li class="nav__item nav__item--current">
-      <a class="nav__link">Главная</a>
-    </li>
-    <li class="nav__item">
-      <a class="nav__link" href="#">Статьи</a>
-    </li>
-    <li class="nav__item">
-      <a class="nav__link" href="#">Фотогалерея</a>
-    </li>
-    <li class="nav__item">
-      <a class="nav__link" href="#">Контакты</a>
-    </li>
-  </ul>
-</nav>
-```
-
-### Виджет в боковой колонке
-
-```html
-<div class="widget">
-  <h4 class="widget__title">Выращиваем желе</h4>
-
-  <div class="widget__content">
-    <p>Чтобы вырастить общительное дружелюбное желе,
-    нам потребуется рулон поролона, два килограмма сахара,
-    три яйца и пол чайной чашки ацетона.</p>
-
-    <a class="widget__link" href="#">Не читать дальше...</a>
-  </div>
-</div>
-```
-
-### Блок новостей
-
-```html
-<div class="news">
-    <h3 class="news__title">Вчерашние новости</h3>
-
-    <ul class="news__list">
-        <!-- к классу элемента добавляем класс блока,
-             чтобы создать новое пространство имён -->
-        <li class="news__item item-news">
-            <h4 class="item-news__title">Соревнования среди воблы по конькобежному спорту</h4>
-            <div class="item-news__text">
-              <p>Победила команда килек из Петрозаводска</p>
-
-              <a href="#" class="item-news__link">Читать дальше</a>
-            </div>
-        </li>
-
-        <li class="news__item item-news">
-            <h4 class="item-news__title">Учёные уточнили роль напильника в уходе за ногтями</h4>
-            <div class="item-news__text">
-              <p>Британские учёные высоко оценили вклад
-                напильника в отращивание полутораметровых ногтей.</p>
-
-              <a href="#" class="item-news__link">Не читать дальше</a>
-            </div>
-        </li>
-    </ul>
-</div>
-```
-
-### Статья или пост в блоге (простой вариант)
-
-```html
-<article class="article">
-  <h3 class="article__title">Нащупываем чакры у пучка петрушки</h3>
-  <time class="article__datetime">32 мая, 10:87</time>
-
-  <div class="article__author author-article">
-    <img class="author-article__img" src="userpic.png" alt="Клешня Андреевна">
-    <a class="author-article__link" href="#">Клешня Андреевна Долгорукая</a>
-    <div class="author-article__desc">Наш эксперт по чакрам</div>
-  </div>
-
-  <div class="article__content">
-    Сходите на рынок и купите у старушек пучок петрушки грамм на 100.
-    Как следует переберите, очистите от жуков и гусениц. Жуков отдайте поиграться
-    коту, гусениц поселите в горшок с кактусами, пусть одна будет Джоном,
-    вторая Билли, а у вас в горшке теперь будет Дикий Запад. Вернитесь
-    к пучку петрушки. Ласково взгляните на него и как следует почешите
-    за ухом, можно себе или коту. Перевяжите атласной ленточкой,
-    непременно завяжите бант. Поздравляем! Теперь у вас есть полностью
-    одомашненный пучок петрушки, который будет весело бегать за вами
-    по пятам и проращивать свои семена в ваших тапках.
-  </div>
-</article>
-```
-
-### Статья или пост в блоге (сложный вариант)
-
-```html
-<article class="entry">
-  <header class="entry__header">
-    <h3 class="entry__title title-entry">
-      <a class="title-entry__link" href="#">Резиновые уточки как способ самопознания</a>
-    </h3>
-
-    <time class="entry__datetime">32 мая, 10:87</time>
-  </header>
-
-  <div class="entry__author author-entry">
-    <img class="author-entry__img" src="userpic.png" alt="Василиса Сергеевич">
-
-    <a class="author-entry__link" href="#">Василиса Сергеевич</a>
-  </div>
-
-  <div class="entry__content">
-    Достаньте с чердака коробку с полусотней резиновых уточек,
-    оставшихся после празднования нового года. Из уточек
-    и горящих свечей выложите пентаграмму на полу комнаты.
-    Сядьте посередине в позу лотоса, в каждую руку возьмите
-    по немецко-бразильскому словарю, прокашляйтесь, наберите
-    полную грудь воздуха и громко и уверенно,
-    с полной самоотдачей скажите "Кря!"
-  </div>
-
-  <div class="entry__tags tags-entry">
-    <h4 class="tags-entry__title">Метки</h4>
-
-    <ul class="tags-entry__list">
-      <li class="tags-entry__item">
-        <a class="tags-entry__link" href="#">хоровод своими руками</a>
-      </li>
-      <li class="tags-entry__item">
-        <a class="tags-entry__link" href="#">фарфоровые тапки</a>
-      </li>
-      <li class="tags-entry__item">
-        <a class="tags-entry__link" href="#">гуталин в кулинарии</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="entry__actions actions-entry">
-    <ul class="actions-entry__list">
-      <li class="actions-entry__item actions-entry__item--read">
-        <a class="actions-entry__link" href="#">238 ответов</a>
-      </li>
-      <li class="actions-entry__item actions-entry__item--write">
-        <a class="actions-entry__link" href="#">Написать в спортлото</a>
-      </li>
-      <li class="actions-entry__item actions-entry__item--share">
-        <a class="actions-entry__link" href="#">Поделиться</a>
-      </li>
-    </ul>
-  </div>
-</article>
-```
